@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 extend = require('extend');
 
 // Initialize plugin by creating counter collection in database.
-exports = function (connection) {
+module.exports = function (connection) {
   var counterSchema,
       IdentityCounter;
 
