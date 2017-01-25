@@ -156,7 +156,7 @@ module.exports = function (connection) {
                 function (err, updatedIdentityCounter) {
                   if (err) return next(err);
                   // If there are no errors then go ahead and set the document's field to the current count.
-                  doc[settings.field] = updatedIdentityCounter.count;
+                  doc[settings.field] = updatedIdentityCounter ? updatedIdentityCounter.count : 0;
                   // Continue with default document save functionality.
                   next();
                 }
